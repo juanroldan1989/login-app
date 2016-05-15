@@ -1,14 +1,14 @@
 <div class="row">
-  <div id="login_page" class="large-12 columns">
+  <div class="large-12 columns centered-box">
     <h3>Login</h3>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "callout" }) do |f| %>
 
       <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true %>
+      <%= f.email_field :email, autofocus: true, type: "email", required: true %>
 
       <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password, autocomplete: "off", :pattern => ".{8,}", title: "8 characters minimum", required: true %>
 
       <div class="login-button">
         <%= f.submit "Log in" %>

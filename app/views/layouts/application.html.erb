@@ -16,6 +16,12 @@
   <div class="alert callout"><%= alert %></div>
 <% end %>
 
+<% if user_signed_in? %>
+  <div class="callout logout-box">
+    <%= link_to("Logout", destroy_user_session_path, method: :delete, class: "button expand") %>
+  </div>
+<% end %>
+
 <%= yield %>
 
 </body>

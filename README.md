@@ -39,6 +39,13 @@ $ cp config/application.sample.yml config/application.yml
 $ rake db:create db:migrate
 ```
 
+Setup testing users:
+```
+$ rake db:seed
+# email: "clark_kent@gmail.com",  password: "123123123"
+# email: "bruce_wayne@gmail.com", password: "123123123"
+```
+
 Run server:
 ```
 $ rails s
@@ -51,5 +58,6 @@ $ rspec spec/
 ```
 
 ### Live app
+- Login with any testing user: https://login-demo-app.herokuapp.com/users/sign_in
 
-- https://login-demo-app.herokuapp.com
+- Or signup with your own credentials: https://login-demo-app.herokuapp.com/users/sign_up

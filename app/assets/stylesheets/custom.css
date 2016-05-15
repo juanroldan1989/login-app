@@ -1,3 +1,7 @@
+.actions {
+  text-align: right;
+}
+
 .centered-box {
   width: 400px;
   position: absolute;
@@ -8,12 +12,4 @@
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-}
-
-.login-button {
-  text-align: right;
-}
-
-.logout-box {
-  text-align: right;
 }

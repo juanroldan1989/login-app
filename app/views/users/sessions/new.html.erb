@@ -5,12 +5,12 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "callout" }) do |f| %>
 
       <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true, type: "email", required: true %>
+      <%= f.email_field :email, autofocus: true, required: true %>
 
       <%= f.label :password %>
       <%= f.password_field :password, autocomplete: "off", :pattern => ".{8,}", title: "8 characters minimum", required: true %>
 
-      <div class="login-button">
+      <div class="actions">
         <%= f.submit "Log in" %>
       </div>
     <% end %>

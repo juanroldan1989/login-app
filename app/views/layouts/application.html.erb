@@ -17,7 +17,7 @@
 <% end %>
 
 <% if user_signed_in? %>
-  <div class="callout logout-box">
+  <div class="callout actions">
     <%= link_to("Logout", destroy_user_session_path, method: :delete, class: "button expand") %>
   </div>
 <% end %>

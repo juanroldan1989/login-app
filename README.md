@@ -4,6 +4,10 @@
 
 # Login App
 
+[![Code Climate](https://codeclimate.com/github/juanroldan1989/login-app/badges/gpa.svg)](https://codeclimate.com/github/juanroldan1989/login-app)
+[![Build Status](https://travis-ci.org/juanroldan1989/login-app.svg?branch=master)](https://travis-ci.org/juanroldan1989/login-app)
+[![Coverage Status](https://coveralls.io/repos/github/juanroldan1989/login-app/badge.svg?branch=master)](https://coveralls.io/github/juanroldan1989/login-app?branch=master)
+
 Web application built to showcase functionalities and tests coverage.
 
 ### Requirements

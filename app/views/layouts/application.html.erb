@@ -8,8 +8,13 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if notice %>
+  <div class="success callout"><%= notice %></div>
+<% end %>
+
+<% if alert %>
+  <div class="alert callout"><%= alert %></div>
+<% end %>
 
 <%= yield %>
 

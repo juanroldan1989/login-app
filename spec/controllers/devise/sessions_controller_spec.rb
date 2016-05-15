@@ -24,7 +24,7 @@ RSpec.describe Devise::SessionsController do
     end
 
     it "should authenticate user successfully with password 'another_password'" do
-      user = User.new(email: "clark_kent@gmail.com", password: "another_password")
+      user = create(:user, :valid)
       sign_in_with_password(user)
 
       post :create, user.attributes
@@ -32,7 +32,7 @@ RSpec.describe Devise::SessionsController do
     end
 
     it "should stop user from login with password 'password'" do
-      user = User.new(email: "clark_kent@gmail.com", password: "password")
+      user = create(:user, :invalid)
       sign_in_with_password(user)
 
       post :create, user.attributes

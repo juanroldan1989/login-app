@@ -35,6 +35,7 @@ $ bundle install
 
 Setup DB:
 ```
+$ cp config/application.sample.yml config/application.yml
 $ rake db:create db:migrate
 ```
 

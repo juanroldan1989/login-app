@@ -23,25 +23,20 @@ RSpec.describe Devise::SessionsController do
       @request.env["devise.mapping"] = Devise.mappings[:user]
     end
 
-    it "should authenticated User successfully with password 'another_password'" do
-      valid_user = double(save: true)
+    it "should authenticate user successfully with password 'another_password'" do
+      user = User.new(email: "clark_kent@gmail.com", password: "another_password")
+      sign_in_with_password(user)
 
-      allow(User).to receive(:update).and_return(valid_user)
-
-      post :create, user: { email: "valid_user@gmail.com", password: "another_password" }
-
-      expect(response).to have_http_status(200)
+      post :create, user.attributes
+      expect(response).to redirect_to(root_path)
     end
 
-    it "should redirect un-authenticated User with password 'password'" do
-      invalid_user = double(save: false)
+    it "should stop user from login with password 'password'" do
+      user = User.new(email: "clark_kent@gmail.com", password: "password")
+      sign_in_with_password(user)
 
-      allow(User).to receive(:update).and_return(invalid_user)
-
-      post :create, user: { email: "invalid_user@gmail.com", password: "password" }
-
-      expect(response).to render_template("new")
+      post :create, user.attributes
+      expect(response).to redirect_to(new_user_session_path)
     end
   end
-
 end

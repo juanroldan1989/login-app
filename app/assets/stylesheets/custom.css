@@ -2,14 +2,20 @@
   text-align: right;
 }
 
-.centered-box {
-  width: 400px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
+@media only screen and (max-width: upper-bound(0em, 39em)) {
+  .centered-box {}
+}
 
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+@media only screen and (min-width: 40em) {
+  .centered-box {
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 }
